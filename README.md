@@ -1,2 +1,7 @@
-# Project-Team6
-Project 2
+
+_Team Members:_
+**Jason Kirker
+  Jyoti Kumari
+  Kenneth Fickling
+  Michael Guillen
+  Sanjana Tripathi**
