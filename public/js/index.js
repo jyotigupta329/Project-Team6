@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#login').webuiPopover({url:'#login-form'});
   });
+  
   $(function(){
     $("#submit").on("click", function(event){
       event.preventDefault();
