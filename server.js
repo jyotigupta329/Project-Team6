@@ -4,8 +4,8 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
 //Authentication requirements:  Not sure which files they'll go in, but including them so we have them:
-var bcrypt = require("bcrypt");
-var jwt = require("jsonwebtoken");
+// var bcrypt = require("bcrypt");
+// var jwt = require("jsonwebtoken");
 //Authentication additions end.
 
 var db = require("./models");
