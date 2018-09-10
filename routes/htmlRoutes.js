@@ -11,6 +11,10 @@ module.exports = function(app) {
     // });
     res.render("index");
   });
+  
+   app.get("/results", function(req, res) {
+    res.render("results");
+  });
 
   // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
