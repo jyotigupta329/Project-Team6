@@ -28,5 +28,18 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyotigupta329/Project-Team6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jyotigupta329/Project-Team6/issues"
+  },
+  "homepage": "https://github.com/jyotigupta329/Project-Team6#readme"
 }

@@ -109,5 +109,14 @@ $("#submit").on("click", function(event){
     data: userFeeling
   }).then(function(){
     console.log("User Feeling detected.");
+    var queryURL = "https://healthruwords.p.mashape.com/v1/quotes/"
+    $.ajax({
+      type: "GET",
+      url: "https://healthruwords.p.mashape.com/v1/quotes/",
+      headers: {
+        "X-Mashape-Key": "ZWnq8fKzw8mshT3ZBt7cDyxQcjX7p1pVHfSjsn86RwKEjG3pF9"
+        
+      }
+    })
   });
 });
