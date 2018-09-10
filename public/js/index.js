@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+  $(".dropdown-trigger").dropdown()});
+
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -97,3 +101,18 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$("#submit").on("click", function(event){
+  event.preventDefault();
+  var temp = $("#feeling").val().trim();
+  var userFeeling = {
+    feeling: temp
+  };
+  $.ajax("/api/quotes",{
+    type: "POST",
+    data: userFeeling
+  }).then(function(){
+    console.log("User Feeling detected.");
+  });
+});
+
