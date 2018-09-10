@@ -1,6 +1,8 @@
 $(document).ready(function() {
+
   $('#login').webuiPopover({url:'#login-form'});
   });
+});
 // // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
@@ -97,32 +99,22 @@ $(document).ready(function() {
 //   });
 // };
 
-// // Add event listeners to the submit and delete buttons
-// $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+// Get references to page elements
+
 $(function(){
-  $("#submit").on("click", function(event){
-    event.preventDefault();
-    var temp = $("#feeling").val().trim();
-    console.log("inspiring");
-    var userFeeling = {
-      feeling: temp
-    };
-    $.ajax("/api/quotes",{
-      type: "POST",
-      data: userFeeling
-    }).then(function(){
-      console.log("User Feeling detected.");
-      var queryURL = "https://healthruwords.p.mashape.com/v1/quotes/"
-      $.ajax({
-        type: "GET",
-        url: "https://healthruwords.p.mashape.com/v1/quotes/",
-        headers: {
-          "X-Mashape-Key": "ZWnq8fKzw8mshT3ZBt7cDyxQcjX7p1pVHfSjsn86RwKEjG3pF9"
-          
-        }
-      })
-    });
+$("#submit").on("click", function(event){
+  event.preventDefault();
+  var temp = $("#feeling").val().trim();
+  var userFeeling = {
+    feeling: temp
+  };
+  $.ajax("/api/quotes",{
+    type: "POST",
+    data: userFeeling
+  }).then(function(){
+    console.log("User Feeling detected.");
   });
 });
-
+});
