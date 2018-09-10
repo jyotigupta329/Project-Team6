@@ -1,6 +1,6 @@
-$( document ).ready(function() {
-  $(".dropdown-trigger").dropdown()});
-
+$(document).ready(function() {
+$('#login').webuiPopover({url:'#login-form'});
+});
 
 // Get references to page elements
 var $exampleText = $("#example-text");
