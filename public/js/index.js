@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $('#login').webuiPopover({url:'#login-form'});
+  });
 // // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
