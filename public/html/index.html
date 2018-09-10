@@ -7,6 +7,8 @@
     <title>Inspire</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cantarell|Pacifico" rel="stylesheet">
@@ -34,19 +36,20 @@
     </nav>
     <div class="container">
         <div class="row">
-                <div class="input-field col m12" title="How are you feeling?">
-                        <input placeholder="How are you feeling?" id="feeling" type="text" class="validate">
-                        <label id="feeling-label" for="feeling_type"></label>
-                    </div>
+            <div class="input-field col m12" title="How are you feeling?">
+                <input placeholder="How are you feeling?" id="feeling" type="text" class="validate">
+                <label id="feeling-label" for="feeling_type"></label>
+            </div>
         </div>
         <div class="row">
             <div class="col m5"></div>
             <div class="col m2">
-                <a class="waves-effect waves-light btn-small">Inspire me!</a>
+                <a class="waves-effect waves-light btn-small" id="submit">Inspire me!</a>
             </div>
             <div class="col m5"></div>
-        </div>  
+        </div>
     </div>
 </body>
+
 
 </html>

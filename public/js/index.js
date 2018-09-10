@@ -97,3 +97,17 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$("#submit").on("click", function(event){
+  event.preventDefault();
+  var temp = $("#feeling").val().trim();
+  var userFeeling = {
+    feeling: temp
+  };
+  $.ajax("/api/quotes",{
+    type: "POST",
+    data: userFeeling
+  }).then(function(){
+    console.log("User Feeling detected.");
+  });
+});
