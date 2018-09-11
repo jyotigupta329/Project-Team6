@@ -29,6 +29,24 @@
 <body>
   {{{body}}}
   
+<!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+
+    <script>
+        //We might migrate these files, but at they exist now (and here) for some compatibility purposes:
+
+        $("#login-btn").on("click", function () {
+        
+            //On the press of the login button
+            var username = $("#username-input").val();
+            var password = $("#password-input").val();
+            console.log("At this time, username: ", username);
+            console.log("At this time, password: ", password);
+            // See what values have been put into the fields.
+        });
+    </script>
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+// GUYS:  I'll delete this whole file or use it later, depending, but it's here for my reference, so leave it for now please!
+
+
 
 // We might move auth into it's own file, so this is here as a reference. Just ignore until we get it working in the other file, then we may arrange it more nicely.
 
@@ -50,22 +53,22 @@
 //     //     });
 //     // });
 
-//     app.post("/api/register", (req, res) => {
-//         if (!req.body.email || !req.body.password) {
-//             return res.json({ success: false, message: "missing username or password" });
-//         }
-//         const { email, password } = req.body;
-//         bcrypt.hash(password, 10, function (err, hash) {
-//             if (err) {
-//                 res.json({ success: false, message: "Problem creating account" });
-//             }
-//             connection.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash], function (err, results) {
-//                 if (err) {
-//                     res.json({ success: false, message: "Email address is taken" });
-//                 }
-//                 res.json({ success: true, results: results });
-//             });
-//         });
+    // app.post("/api/register", (req, res) => {
+    //     if (!req.body.email || !req.body.password) {
+    //         return res.json({ success: false, message: "missing username or password" });
+    //     }
+    //     const { email, password } = req.body;
+    //     bcrypt.hash(password, 10, function (err, hash) {
+    //         if (err) {
+    //             res.json({ success: false, message: "Problem creating account" });
+    //         }
+    //         connection.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash], function (err, results) {
+    //             if (err) {
+    //                 res.json({ success: false, message: "Email address is taken" });
+    //             }
+    //             res.json({ success: true, results: results });
+    //         });
+    //     });
 
 //     });
 
@@ -109,3 +112,41 @@
 
 
 // module.exports = auth;
+
+
+
+
+
+// SCRAP:
+
+
+// $.post("/api/signin", { username: username, password: password }, function (response) {
+//     console.log("This is the response given from the api/signin on login click action: ", response);
+//     console.log("At that time, username: ", username);
+//     console.log("At that time, password: ", password);
+//     //Do some checking to peak behind the scenes ^^.
+//     localStorage.setItem("token", response.token);
+//     // When we get a response from the sign-in request, (which should be the jwt token value), then place the token in the user's storage.
+// });
+
+
+
+
+// $("#private").click(function () {
+//     $.ajax({
+//         url: "/api/private",
+//         method: "GET",
+//         headers: {
+//             "Authorization": "Bearer " + localStorage.getItem("token")
+//         }
+//     }).then(function (res) {
+//         console.log(res);
+//         $("#news").text(JSON.stringify(res));
+//     });
+// });
+
+// // Have a button added for this, for now just assume we will timeout.
+// $("#logout").click(function () {
+//     localStorage.setItem("token", "");
+//     location.reload();
+// });

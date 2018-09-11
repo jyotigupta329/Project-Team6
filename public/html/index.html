@@ -68,53 +68,7 @@
     </div>
 
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
-
-    <script>
-        //We might migrate these files, but at they exist now (and here) for some compatibility purposes:
-
-        $("#login-btn").click(function () {
-            //On the press of the login button
-            var username = $("#username-input").val();
-            var password = $("#password-input").val();
-            console.log("At this time, username: ", username);
-            console.log("At this time, password: ", password);
-            // See what values have been put into the fields.
-
-            $.post("/api/signin", { username: username, password: password }, function (response) {
-                console.log("This is the response given from the api/signin on login click action: ", response);
-                console.log("At that time, username: ", username);
-                console.log("At that time, password: ", password);
-                //Do some checking to peak behind the scenes ^^.
-                localStorage.setItem("token", response.token);
-                // When we get a response from the sign-in request, (which should be the jwt token value), then place the token in the user's storage.
-            });
-        });
-
-        $("#private").click(function () {
-            $.ajax({
-                url: "/api/private",
-                method: "GET",
-                headers: {
-                    "Authorization": "Bearer " + localStorage.getItem("token")
-                }
-            }).then(function (res) {
-                console.log(res);
-                $("#news").text(JSON.stringify(res));
-            });
-        });
-
-        // Have a button added for this, for now just assume we will timeout.
-        $("#logout").click(function () {
-            localStorage.setItem("token", "");
-            location.reload();
-        });
-
-
-    </script>
+    
 </body>
 
 
