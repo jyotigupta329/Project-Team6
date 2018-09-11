@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   $('#login').webuiPopover({url:'#login-form'});
   });
@@ -16,6 +17,8 @@ $(document).ready(function() {
       }).then(function(){
         console.log("User Feeling detected.");
       });
+
     });
   });
+});
 
