@@ -14,8 +14,33 @@ $(document).ready(function() {
       $.ajax("/api/quotes",{
         type: "POST",
         data: userFeeling
-      }).then(function(){
+      }).then(function (QuotesRes) {
         console.log("User Feeling detected.");
+        console.log("User Spotify Song detected.");
+        console.log(spotifyRes);
+        console.log(QuotesRes);
       });
     });
   });
+});
+
+
+// $(function () {
+//   $("#submit").on("click", function (event) {
+//     event.preventDefault();
+//     console.log("inspired")
+//     var temp = $("#feeling").val().trim();
+//     var userFeeling = {
+//       feeling: temp
+//     };
+//     $.ajax("/api/quotes", {
+//       type: "POST",
+//       data: userFeeling
+//     }).then(function () {
+//       console.log("User Feeling detected.");
+//     });
+
+//   });
+// });
+
+
