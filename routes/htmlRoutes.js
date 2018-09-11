@@ -11,6 +11,10 @@ module.exports = function(app) {
     // });
     res.render("index");
   });
+  
+   app.get("/results", function(req, res) {
+    res.render("results");
+  });
 
   app.get("/results", function(req, res) {
     res.render("results");
