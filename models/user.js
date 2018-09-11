@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+<<<<<<< HEAD
     var User = sequelize.define("User", {
       userName: {
           type: DataTypes.STRING,
@@ -19,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
         }
         
       }
+=======
+    var User  = sequelize.define("User", {
+      text: DataTypes.STRING,
+      description: DataTypes.TEXT
+>>>>>>> master
     });
     return User;
   };

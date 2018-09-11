@@ -6,8 +6,8 @@ var exphbs = require("express-handlebars");
 // var $ = require("jquery");  MIGHT NEED THIS, BUT FOR NOW PLACING THE jQUERY IN THE HTML ITSELF.
 
 //Authentication requirements:  Not sure which files they'll go in, but including them so we have them:
-var bcrypt = require("bcrypt");
-var jwt = require("jsonwebtoken");
+// var bcrypt = require("bcrypt");
+// var jwt = require("jsonwebtoken");
 //Authentication additions end.
 
 var db = require("./models");
@@ -33,7 +33,8 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+//changed from false to true only in the following line and not below it
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

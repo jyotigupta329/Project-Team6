@@ -1,31 +1,28 @@
 <nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Inspire</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li>
-                <!-- Profile hyperlink to profile.html page -->
-                <a href="#">Profile (username)</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center"></a>
+        </div>
+        <div class="row center">
+            <div class="col m4"></div>
+            <div class="col m4">
+                <header id="resultsHeader">Inspire</header>
+            </div>
+            <div class="col m4"></div>
+        </div>
+    </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="input-field col m6" title="Here will be the quote">
-            <input placeholder="Here is an inspiring quote" id="quote" type="text" class="validate">
-            <label id="quote-label" for="quote_type"></label>
-        </div>
-        <div class="input-field col m6" title="Here will be the Spotify song">
-            <input placeholder="Here is an inspiring song" id="song" type="text" class="validate">
-            <label id="song-label" for="song_type"></label>
+    <div class="container">
+
+        <div class="row">
+            <div class="input-field col m6">
+                <p>
+                    <span class="label">Quote:</span> {{this.quote}}
+                </p>
+            </div>
+            <div class="input-field col m6">
+                <p>
+                    <span class="label">Song:</span> {{this.song}}
+                </p>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col m5"></div>
-        <div class="col m2">
-            <a class="waves-effect waves-light btn-small" id="return">Return Home</a>
-        </div>
-        <div class="col m5"></div>
-    </div>
-</div>
