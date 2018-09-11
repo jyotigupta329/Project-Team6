@@ -3,6 +3,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
+// var $ = require("jquery");  MIGHT NEED THIS, BUT FOR NOW PLACING THE jQUERY IN THE HTML ITSELF.
+
 //Authentication requirements:  Not sure which files they'll go in, but including them so we have them:
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
@@ -51,3 +53,4 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+
