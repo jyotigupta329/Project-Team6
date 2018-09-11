@@ -28,6 +28,19 @@ body {
   color: black;
   font-family: 'Shrikhand', cursive;
 }
+ .resultsContainer {
+  background-image: url("http://10kshortcuts.com/wp-content/uploads/2017/02/1487408116_maxresdefault.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 60;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
 
   nav {
   width: 100%;
