@@ -1,5 +1,6 @@
 body {
   border-color: transparent;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .list-group-item {
@@ -7,7 +8,8 @@ body {
 }
  #submit {
    margin: 0 auto;
-   margin-top: 20px;
+   margin-top: 60px;
+   font-family: 'Fjalla One', sans-serif;
  }
 
  #header {
@@ -15,7 +17,7 @@ body {
    margin-top: 175px;
    margin-bottom: 20px;
    font-size: 72px;
-   color: white;
+   color: #CAE4DB;
    font-family: 'Shrikhand', cursive;
  }
 
@@ -27,6 +29,56 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
  }
+
+ #feeling {
+  font-weight: 300;
+  text-shadow: 0px 0px 3px #000;
+  color: white;
+  opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-field input[type=text] {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;
+}
+
+.input-field input[type=text]:hover {
+  border-bottom: 1px solid #7A9D9D; ;
+  box-shadow: 0 1px 0 0 #7A9D9D;;
+}
+
+#feeling[type=text]:enabled {
+  border-bottom: 1px solid #DCAE1D;;
+  box-shadow: 0 1px 0 0 #DCAE1D;;
+}
+
+#feeling[type=text]:hover {
+  border-bottom: 1px solid white;;
+  box-shadow: 0 1px 0 0 white;;
+}
+
+#password[type=password]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#password[type=password]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+#username[type=text]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#username[type=text]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+
 
  /* affects main page background*/
  .backgroundimg {
