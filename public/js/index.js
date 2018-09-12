@@ -11,13 +11,9 @@ $(function () {
     var userFeeling = {
       feeling: temp
     };
-    // $.ajax("/api/findSong/" + temp, {
-    //   type: "GET"
-    // }).then(function (spotifyRes) {
-    // $.ajax("/api/quotes", {
-    //   type: "GET"
-    // }).then(function (QuotesRes) {
-
+    $.ajax("/api/findSong/" + temp, {
+      type: "GET"
+    }).then(function (spotifyRes) {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     var targetUrl = "https://api.paperquotes.com/apiv1/quotes/?tags=" + temp + "&limit=10";
     console.log(targetUrl);
@@ -43,7 +39,7 @@ $(function () {
       }); //close post request
 
     }); //close get ajax call
-    // )};
+    }); //close spotify ajax
   });//close submit on-click
 });   //close function()
 
