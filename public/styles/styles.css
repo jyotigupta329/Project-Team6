@@ -3,6 +3,12 @@ body {
   font-family: 'Fjalla One', sans-serif;
 }
 
+.label {
+  border-color: transparent;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -23,19 +29,20 @@ body {
 
  #resultsHeader {
   margin: 0 auto;
+  margin-top: 235px;
   margin-bottom: 20px;
   font-size: 72px;
-  color: black;
+  color: white;
   font-family: 'Shrikhand', cursive;
 }
  .resultsContainer {
-  background-image: url("http://10kshortcuts.com/wp-content/uploads/2017/02/1487408116_maxresdefault.jpg");
+  background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/06/Bubble-Wallpaper-Widescreen-Inspiring.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: absolute;
-  top: 60;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -50,6 +57,15 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
  }
+
+  #resultsNav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  }
 
  #feeling {
   font-weight: 300;
