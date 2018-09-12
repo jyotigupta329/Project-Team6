@@ -20,6 +20,12 @@ module.exports = function(app) {
     res.render("results");
   });
 
+  // // The route to go to a page for logged in users:  STILL IN DEVELOPMENT
+  // app.post("/verified", passport.authenticate('jwt', { session: false }), function(req, res) {
+  //   //WRAP THIS IN IF LOGIC TO GO BASED ON JWT AUTH.
+  //   res.render("verified");
+  // });
+
 
   // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {

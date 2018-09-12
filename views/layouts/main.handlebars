@@ -37,15 +37,27 @@
     <script>
         //We might migrate these files, but at they exist now (and here) for some compatibility purposes:
 
-        $("#login-btn").on("click", function () {
+        $("#register-btn").on("click", function () {
         
             //On the press of the login button
-            var username = $("#username-input").val();
-            var password = $("#password-input").val();
+            var username = $("#username-register").val();
+            var password = $("#password-register").val();
             console.log("At this time, username: ", username);
             console.log("At this time, password: ", password);
             // See what values have been put into the fields.
         });
+
+        $("#login-btn").on("click", function () {
+        
+            //On the press of the login button
+            var username = $("#username-login").val();
+            var password = $("#password-login").val();
+            console.log("Attempting to login with name: ", username);
+            console.log("and with password: ", password);
+            // See what values have been put into the fields.
+        });
+
+
     </script>
 </body>
 
