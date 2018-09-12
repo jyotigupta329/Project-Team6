@@ -1,3 +1,276 @@
+body {
+  border-color: transparent;
+  font-family: 'Fjalla One', sans-serif;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
+ #submit {
+   margin: 0 auto;
+   margin-top: 60px;
+   font-family: 'Fjalla One', sans-serif;
+ }
+
+ #header {
+   margin: 0 auto;
+   margin-top: 175px;
+   margin-bottom: 20px;
+   font-size: 72px;
+   color: #CAE4DB;
+   font-family: 'Shrikhand', cursive;
+ }
+
+ #resultsHeader {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 72px;
+  color: black;
+  font-family: 'Shrikhand', cursive;
+}
+ .resultsContainer {
+  background-image: url("http://10kshortcuts.com/wp-content/uploads/2017/02/1487408116_maxresdefault.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 60;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+  nav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ }
+
+ #feeling {
+  font-weight: 300;
+  text-shadow: 0px 0px 3px #000;
+  color: white;
+  opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-field input[type=text] {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;
+}
+
+.input-field input[type=text]:hover {
+  border-bottom: 1px solid #7A9D9D; ;
+  box-shadow: 0 1px 0 0 #7A9D9D;;
+}
+
+#feeling[type=text]:enabled {
+  border-bottom: 1px solid #DCAE1D;;
+  box-shadow: 0 1px 0 0 #DCAE1D;;
+}
+
+#feeling[type=text]:hover {
+  border-bottom: 1px solid white;;
+  box-shadow: 0 1px 0 0 white;;
+}
+
+#password[type=password]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#password[type=password]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+#username[type=text]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#username[type=text]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+
+
+ /* affects main page background*/
+ .backgroundimg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+
+
+#back1 {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("https://everyday-c80f.kxcdn.com/wp-content/uploads/2017/03/76-Inspirational-picture-quotes-and-motivational-images.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+#back2 {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("https://awakenthegreatnesswithin.com/wp-content/uploads/2017/01/OM-1.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+#back3 {
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("https://media1.popsugar-assets.com/files/thumbor/_XIv2PMlWMie6FmqWMBh7pr-XHk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/19/992/n/36735815/c5a39fb959c04d658f6b73.48321050_edit_img_cover_file_37438685_1477814400/i/39-Inspirational-Quotes-Change-Your-Life.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+#back4 {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url("https://awakenthegreatnesswithin.com/wp-content/uploads/2017/05/WQ-1.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+#back5 {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url("http://2wixx71erohn2ixvfu42jxuw.wpengine.netdna-cdn.com/wp-content/uploads/2015/09/shutterstock_280199000-1000x641.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+@keyframes backgroundchangeFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes backgroundchangeFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#backgroundchange div:nth-of-type(1) {
+  animation-delay: 20s;
+  -webkit-animation-delay: 20s;
+}
+
+#backgroundchange div:nth-of-type(2) {
+  animation-delay: 15s;
+  -webkit-animation-delay: 15s;
+}
+
+#backgroundchange div:nth-of-type(3) {
+  animation-delay: 10s;
+  -webkit-animation-delay: 10s;
+}
+
+#backgroundchange div:nth-of-type(4) {
+  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+}
+
+#backgroundchange div:nth-of-type(5) {
+  animation-delay: 0;
+  -webkit-animation-delay: 0;
+}
+
+#backgroundchange div {
+  animation-name: backgroundchangeFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  -webkit-animation-name: backgroundchangeFadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 20s;
+}
+/* end of main page background */
