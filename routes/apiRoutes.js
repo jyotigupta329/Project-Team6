@@ -1,6 +1,7 @@
 var db = require("../models");
 var chalk = require("chalk");
 
+var dataFromQuotes;
 // --------------------------------------------------------//
 // Dependencies for Spotify API
 //--------------------------------------------------------//
@@ -10,27 +11,27 @@ var spotify = new Spotify(keys.spotify);
 
 module.exports = function (app) {
   // Get all examples
-  app.get("/api/examples", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  // app.get("/api/examples", function (req, res) {
+  //   db.Example.findAll({}).then(function (dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
 
   // Create a new example
-  app.post("/api/examples", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // app.post("/api/examples", function (req, res) {
+  //   db.Example.create(req.body).then(function (dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function (req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // app.delete("/api/examples/:id", function (req, res) {
+  //   db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
 
-  // Get all songs form spotify
+// Get all songs form spotify
   app.get("/api/findSong/:keyword", function (req, res) {
     var keyWord = req.params.keyword;
     spotifySong(keyWord, function (err, result) {
@@ -39,6 +40,17 @@ module.exports = function (app) {
       res.json(result);
     });
   });
+
+  app.post("/api/quotes", function(req, res){
+    dataFromQuotes = req.body;
+    console.log(req.body);
+    res.send(true);
+  });
+
+  app.get("/api/quotes", function (req, res) {
+    res.json(dataFromQuotes);
+  });
+
 };
 
 function spotifySong(keyWord, callback) {
