@@ -12,6 +12,7 @@ body {
 .list-group-item {
   line-height: 2.5;
 }
+
  #submit {
    margin: 0 auto;
    margin-top: 60px;
@@ -132,6 +133,24 @@ body {
 #username[type=text]:hover {
   border-bottom: 1px solid #CAE4DB;;
   box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+.sidenav-trigger {
+  margin-left: 20px;
+  size: 40px;
+  color: #CAE4DB;
+}
+
+#welcome {
+  margin-left: 20px;
+}
+
+.sidenav {
+  background-color: white;
+}
+
+.subheader {
+  font-size: 24px;
 }
 
 
