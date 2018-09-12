@@ -84,12 +84,19 @@
             <div class="col m4"></div>
         </div>
     </div>
+    <div id="home" class="panel">
+        <div class="inner">
+            <div id="backgroundchange">
+                <div class="backgroundimg" id="back1"></div>
+                <div class="backgroundimg" id="back2"></div>
+                <div class="backgroundimg" id="back3"></div>
+                <div class="backgroundimg" id="back4"></div>
+                <div class="backgroundimg" id="back5"></div>
+            </div>
+        </div>
+    </div>
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    
-=======
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -106,53 +113,38 @@
             console.log("At this time, password: ", password);
             // See what values have been put into the fields.
 
-            $.post("/api/signin", { username: username, password: password }, function (response) {
-                console.log("This is the response given from the api/signin on login click action: ", response);
-                console.log("At that time, username: ", username);
-                console.log("At that time, password: ", password);
-                //Do some checking to peak behind the scenes ^^.
-                localStorage.setItem("token", response.token);
-                // When we get a response from the sign-in request, (which should be the jwt token value), then place the token in the user's storage.
-            });
+        //     $.post("/api/signin", { username: username, password: password }, function (response) {
+        //         console.log("This is the response given from the api/signin on login click action: ", response);
+        //         console.log("At that time, username: ", username);
+        //         console.log("At that time, password: ", password);
+        //         //Do some checking to peak behind the scenes ^^.
+        //         localStorage.setItem("token", response.token);
+        //         // When we get a response from the sign-in request, (which should be the jwt token value), then place the token in the user's storage.
+        //     });
+        // });
+
+        // $("#private").click(function () {
+        //     $.ajax({
+        //         url: "/api/private",
+        //         method: "GET",
+        //         headers: {
+        //             "Authorization": "Bearer " + localStorage.getItem("token")
+        //         }
+        //     }).then(function (res) {
+        //         console.log(res);
+        //         $("#news").text(JSON.stringify(res));
+        //     });
+        // });
+
+        // // Have a button added for this, for now just assume we will timeout.
+        // $("#logout").click(function () {
+        //     localStorage.setItem("token", "");
+        //     location.reload();
+
+
         });
 
-        $("#private").click(function () {
-            $.ajax({
-                url: "/api/private",
-                method: "GET",
-                headers: {
-                    "Authorization": "Bearer " + localStorage.getItem("token")
-                }
-            }).then(function (res) {
-                console.log(res);
-                $("#news").text(JSON.stringify(res));
-            });
-        });
-
-        // Have a button added for this, for now just assume we will timeout.
-        $("#logout").click(function () {
-            localStorage.setItem("token", "");
-            location.reload();
-        });
-
-
+        
     </script>
-=======
-    <div id="home" class="panel">
-            <div class="inner">
-                <div id="backgroundchange">
-                    <div class="backgroundimg" id="back1"></div>
-                    <div class="backgroundimg" id="back2"></div>
-                    <div class="backgroundimg" id="back3"></div>
-                    <div class="backgroundimg" id="back4"></div>
-                    <div class="backgroundimg" id="back5"></div>
-                </div>
-            </div>
-        </div>
-
->>>>>>> 0fc089b951527f46ed7205503f5629e75489503a
->>>>>>> master
 </body>
-
-
 </html>
