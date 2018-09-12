@@ -1,31 +1,30 @@
 <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center"></a>
-            <ul class="left">
-                <li><a id="profile" href="#">Profile</a></li>
-        </div>
-    </nav>
-    <div class="resultsContainer">
-        <div class="row center">
-            <div class="col m4"></div>
-            <div class="col m4">
-                <header id="resultsHeader">Inspire</header>
-            </div>
-            <div class="col m4"></div>
-        </div>
-
-        <div class="row center">
-            <div class="col m3"></div>
-            <div class="col m3">
-                <p>
-                    <span class="label">Quote:</span> {{this.quote}}
-                </p>
-            </div>
-            <div class="input-field col m3">
-                <p>
-                    <span class="label">Song:</span> {{this.song}}
-                </p>
-                <div class="col m3"></div>
-            </div>
-        </div>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center"></a>
+        <ul class="left">
+            <li><a id="profile" href="#">Profile</a></li>
     </div>
+</nav>
+<div class="resultsContainer">
+    <div class="row center">
+        <div class="col m4"></div>
+        <div class="col m4">
+            <header id="resultsHeader">Inspire</header>
+        </div>
+        <div class="col m4"></div>
+    </div>
+
+    <div class="container">
+        <div class="first">
+            <p>
+                <span class="label">Quote:</span> {{this.quote}}
+            </p>
+        </div>
+        <div class="second">
+            <p>
+                <span class="label">Song:</span> {{this.song}}
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

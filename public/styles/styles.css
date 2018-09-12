@@ -48,14 +48,14 @@ body {
 
  #resultsHeader {
   margin: 0 auto;
-  margin-top: 235px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 72px;
+  font-size: 36px;
   color: white;
   font-family: 'Shrikhand', cursive;
 }
  .resultsContainer {
-  background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/06/Bubble-Wallpaper-Widescreen-Inspiring.jpg");
+  background-color: #ffb7a0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -67,6 +67,30 @@ body {
   width: 100%;
   z-index: -100;
 }
+
+.container {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  margin-left: 100px;
+}
+ .first {
+  display: inline-block;
+  width: 500px;
+  float: left;
+  height: 300px;
+  word-wrap: break-word;
+ }
+ .second {
+  width: 500px;
+  float: right;
+  height: 300px;
+  word-wrap: break-word;
+ }
+ .clear{
+   clear: both;
+ }
+
 
   nav {
   width: 100%;
