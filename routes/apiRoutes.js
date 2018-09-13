@@ -26,7 +26,6 @@ var keys = require("./../keys");
 var spotify = new Spotify(keys.spotify);
 
 module.exports = function (app) {
-<<<<<<< HEAD
 
   // An open call that lists all users in the DB.  Turn this OFF before production for safety of information.
   app.get("/api/register", function (req, res) {
@@ -36,14 +35,14 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/verifiedit"), function (req,res) {
+  app.post("/verifiedit"), function (req, res) {
     console.log("VERIFIED IT REQ.BODY: ", req.body)
-     res.json(req);
+    res.json(req);
   };
 
-  app.get("/verifiedit"), function (req,res) {
+  app.get("/verifiedit"), function (req, res) {
     res.json(req);
- };
+  };
 
   // The POST that pushes a new user into the db.
   app.post("/api/register", function (req, res) {
@@ -111,123 +110,66 @@ module.exports = function (app) {
 
   });
 
-
-
-
-
-
   // Get all songs form spotify
   app.get("/api/findSong/:keyword", function (req, res) {
     var keyWord = req.params.keyword;
-=======
 
-  app.get("/api/result/:keyword", function (req, res) {
-    var keyWord = req.params.keyword;
-    var hsbResultObject = {
-      quote: null,
-      song: null
-    };
+    app.get("/api/result/:keyword", function (req, res) {
+      var keyWord = req.params.keyword;
+      var hsbResultObject = {
+        quote: null,
+        song: null
+      };
 
 
-    var optionspost = {
-      url: 'https://api.paperquotes.com/apiv1/quotes/?tags=' + keyWord + '&limit=10',
-      headers: {
-        'Authorization': 'TOKEN e2eeb1aa9f32eb07fa04595a0c457ecb6fadb772'
-      },
-      json: true
-    };
+      var optionspost = {
+        url: 'https://api.paperquotes.com/apiv1/quotes/?tags=' + keyWord + '&limit=10',
+        headers: {
+          'Authorization': 'TOKEN e2eeb1aa9f32eb07fa04595a0c457ecb6fadb772'
+        },
+        json: true
+      };
 
->>>>>>> master
-    spotifySong(keyWord, function (err, result) {
-      if (err) throw err;
-      hsbResultObject.song = result.album.external_urls.spotify;
+      spotifySong(keyWord, function (err, result) {
+        if (err) throw err;
+        hsbResultObject.song = result.album.external_urls.spotify;
 
-      request.get(optionspost, function (error, response, body) {
-        if (error) {
-          console.error(error);
-        } else {
-          console.info(body);
-          var quotesObject = [];
-          for (var i = 0; i < body.results.length; i++) {
-            quotesObject.push(body.results[i].quote);
+        request.get(optionspost, function (error, response, body) {
+          if (error) {
+            console.error(error);
+          } else {
+            console.info(body);
+            var quotesObject = [];
+            for (var i = 0; i < body.results.length; i++) {
+              quotesObject.push(body.results[i].quote);
+            }
+            hsbResultObject.quote = quotesObject;
+            res.render("results", hsbResultObject);
           }
-          hsbResultObject.quote = quotesObject;
-          res.render("results", hsbResultObject);
-        }
+        });
       });
     });
-  });
 
-<<<<<<< HEAD
-  // // Get all examples
-  // app.get("/api/examples", function (req, res) {
-  //   db.Example.findAll({}).then(function (dbExamples) {
-  //     res.json(dbExamples);
-  //   });
-  // });
-
-  // // Create a new example
-  // app.post("/api/examples", function (req, res) {
-  //   db.Example.create(req.body).then(function (dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
-
-  // // Delete an example by id
-  // app.delete("/api/examples/:id", function (req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
-
-
-
-
-
-
-  //DO WE WANT THIS IN THIS FILE?  I feel like it might 'belong' somewhere besides in our api routing?
-  //CODING THIS OUT IN MY VERSION UNTIL I GET SPOTIFY KEYS.
-  // function spotifySong(keyWord, callback) {
-  //   spotify
-  //     .search({ type: 'track', query: keyWord })
-  //     .then(function (response) {
-  //       var jsonData = response.tracks.items[0];
-  //       console.log(jsonData);
-  //       var logSpotify =
-  //         chalk.bold.yellow("\nArtist(s): ") + jsonData.album.artists[0].name +
-  //         chalk.bold.yellow("\nThe song's name: ") + jsonData.name +
-  //         chalk.bold.yellow("\nThe album that the song is from: ") + jsonData.album.name;
-  //       console.log("\n----------------------- movie-this command -----------------------------");
-  //       console.log(logSpotify);
-  //       console.log("\n-----------------------------------------------------------------------\n");
-  //       return callback(null, jsonData);
-  //     })
-  //     .catch(function (err) {
-  //       console.log(err);
-  //       return callback(err);
-  //     });
-  // };
-};
-=======
-  function spotifySong(keyWord, callback) {
-    spotify
-      .search({ type: 'track', query: keyWord })
-      .then(function (response) {
-        var jsonData = response.tracks.items[0];
-        console.log(jsonData);
-        var logSpotify =
-          chalk.bold.yellow("\nArtist(s): ") + jsonData.album.artists[0].name +
-          chalk.bold.yellow("\nThe song's name: ") + jsonData.name +
-          chalk.bold.yellow("\nThe album that the song is from: ") + jsonData.album.name;
-        console.log("\n----------------------- movie-this command -----------------------------");
-        console.log(logSpotify);
-        console.log("\n-----------------------------------------------------------------------\n");
-        return callback(null, jsonData);
-      })
-      .catch(function (err) {
-        console.log(err);
-        return callback(err);
-      });
-  }
-}
->>>>>>> master
+    function spotifySong(keyWord, callback) {
+      spotify
+        .search({ type: 'track', query: keyWord })
+        .then(function (response) {
+          var jsonData = response.tracks.items[0];
+          console.log(jsonData);
+          var logSpotify =
+            chalk.bold.yellow("\nArtist(s): ") + jsonData.album.artists[0].name +
+            chalk.bold.yellow("\nThe song's name: ") + jsonData.name +
+            chalk.bold.yellow("\nThe album that the song is from: ") + jsonData.album.name;
+          console.log("\n----------------------- movie-this command -----------------------------");
+          console.log(logSpotify);
+          console.log("\n-----------------------------------------------------------------------\n");
+          return callback(null, jsonData);
+        })
+        .catch(function (err) {
+          console.log(err);
+          return callback(err);
+        });
+      };
+    });
+  };
+    
