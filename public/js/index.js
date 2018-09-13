@@ -1,8 +1,7 @@
 $(document).ready(function () {
   $('#login').webuiPopover({ url: '#login-form' });
   $('#register').webuiPopover({ url: '#register-form' });
-  $('#modal1').modal();
-  $('#modal2').modal();
+  $('.modal').modal();
   $('.sidenav').sidenav();
 });
 
