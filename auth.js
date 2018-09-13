@@ -14,32 +14,32 @@
 //     const bcrypt = require("bcrypt");
 //     const jwt = require("jsonwebtoken");
 
-//     const passport = require("passport");
-//     const { Strategy: JwtStrategy, ExtractJwt } = require("passport-jwt")
+    // const passport = require("passport");
+    // const { Strategy: JwtStrategy, ExtractJwt } = require("passport-jwt")
 
 //     const app = express();
 //     const PORT = process.env.PORT || 3000;
 
 //     const connection = require("./config/connection");
 
-//     const passportOps = {
-//         jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-//         secretOrKey: process.env.JWT_SECRET
-//     }
+    // const passportOps = {
+    //     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    //     secretOrKey: process.env.JWT_SECRET
+    // }
 
-//     passport.use(new JwtStrategy(passportOps, (jwt_payload, done) => {
-//         connection.query("SELECT * FROM users WHERE id = ?", [jwt_payload.id], function (err, results) {
-//             console.log(results);
-//             if (err) {
-//                 return done(err, false);
-//             }
-//             if (results.length < 1) {
-//                 return done(null, false);
-//             }
+    // passport.use(new JwtStrategy(passportOps, (jwt_payload, done) => {
+    //     connection.query("SELECT * FROM users WHERE id = ?", [jwt_payload.id], function (err, results) {
+    //         console.log(results);
+    //         if (err) {
+    //             return done(err, false);
+    //         }
+    //         if (results.length < 1) {
+    //             return done(null, false);
+    //         }
 
-//             done(null, results[0]);
-//         })
-//     }));
+    //         done(null, results[0]);
+    //     })
+    // }));
 
 
 //     app.use(bodyParser.urlencoded({ extended: true }));
@@ -125,7 +125,7 @@
 //     console.log("At that time, username: ", username);
 //     console.log("At that time, password: ", password);
 //     //Do some checking to peak behind the scenes ^^.
-//     localStorage.setItem("token", response.token);
+        //  localStorage.setItem("token", response.token);
 //     // When we get a response from the sign-in request, (which should be the jwt token value), then place the token in the user's storage.
 // });
 

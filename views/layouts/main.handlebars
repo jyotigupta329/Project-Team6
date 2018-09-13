@@ -2,7 +2,7 @@
 <html>
 
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inspire</title>
     <meta name="description" content="">
@@ -27,9 +27,9 @@
 </head>
 
 <body>
-  {{{body}}}
-  
-<!-- JQuery -->
+    {{{body}}}
+
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
@@ -38,7 +38,7 @@
         //We might migrate these files, but at they exist now (and here) for some compatibility purposes:
 
         $("#register-btn").on("click", function () {
-        
+
             //On the press of the login button
             var username = $("#username-register").val();
             var password = $("#password-register").val();
@@ -47,16 +47,16 @@
             // See what values have been put into the fields.
         });
 
-        $("#login-btn").on("click", function () {
-        
-            //On the press of the login button
-            var username = $("#username-login").val();
-            var password = $("#password-login").val();
-            console.log("Attempting to login with name: ", username);
-            console.log("and with password: ", password);
-            // See what values have been put into the fields.
+        $("#login-btn").on("click", function (event) {
+            event.preventDefault();
+            $.post("/api/login", {
+                userName: $("#username-login").val(),
+                password: $("#password-login").val()
+            }, function (response) {
+                console.log("**JWT?***: ", response);
+                localStorage.setItem("token", response.token);
+            });
         });
-
 
     </script>
 </body>

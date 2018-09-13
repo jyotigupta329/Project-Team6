@@ -57,59 +57,61 @@ module.exports = function (app) {
   });
 
   app.post("/api/login", function (req, res) {
+    console.log("Hitting api login");
+    console.log(req.body);
+    console.log(req.body.userName);
+    console.log(req.body.password);
     if (!req.body.userName || !req.body.password) {
       return res.json({ Error: true, Message: "Username or password are missing." });
     }
     const { userName, password } = req.body;
-
-    
-///////////////////////////////////CURRENT LOCATION. WORK OUT HOW TO MAKE IT WORK THE FIRST WAY BY CHANGING VALUES IN USER.JS TO RETURN A CORRECT RESULT.
-
-      //This is how the string SHOULD work, but user/users syntax error.
-    // db.User.findAll({
-    //   where: {
-    //     userName: userName
-    //   }
-    // })
-
-    // So instead we will try calling it directly, but still with sequelize:
-    db.User.sequelize.query("SELECT * FROM 'users' WHERE 'users'.'userName' = ?", [userName], {type: sequelize.QueryTypes.SELECT})
-
-    .then(function (error, results) {
-      if (error) {
-        console.log(results);
-        return res.json({ Error: true, Message: "Error logged." });
+    db.User.findOne({
+      where: {
+        userName: userName
       }
-      if (results.length === 0) {
-        return res.json({ Error: true, Message: "No user with that userName." });
-      }
-      bcrypt.compare(password, results[0].password, function (error, bcryptResult) {
-        if (error) {
-          return res.json({ Error: true, Message: "Incorrect password." });
-        } else {
-          if (bcryptResult) {
-            var token = jwt.sign({ id: results[0].id, expires: +Date.now() + 2592000000 }, process.env.JWT_SECRET)
-            return res.json({ Success: true, Token: token });
+    })
+      .then(function (results) {
+        console.log(userName);
+        console.log(password);
+        bcrypt.compare(password, results.password, function (error, bcryptResult) {
+          if (error) {
+            return res.json({ Error: true, Message: "Incorrect password." });
           } else {
-            return res.json({ Error: true });
+            if (bcryptResult) {
+              var token = jwt.sign({ id: results.id, expires: +Date.now() + 2592000000 }, process.env.JWT_SECRET)
+              return res.json({ Success: true, token: token });
+            } else {
+              return res.json({ Error: true });
+            }
           }
+        });
+      })
+      .catch(function (error) {
+        if (error) {
+          return res.json({ Error: true, Message: "Error logged." });
         }
+        if (results.length === 0) {
+          return res.json({ Error: true, Message: "No user with that userName." });
+        }
+        console.log(error);
       });
-      });
+
   });
 
 
 
 
-// Get all songs form spotify
-app.get("/api/findSong/:keyword", function (req, res) {
-  var keyWord = req.params.keyword;
-  spotifySong(keyWord, function (err, result) {
-    if (err) throw err;
-    console.log(result);
-    res.json(result);
+
+
+  // Get all songs form spotify
+  app.get("/api/findSong/:keyword", function (req, res) {
+    var keyWord = req.params.keyword;
+    spotifySong(keyWord, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+      res.json(result);
+    });
   });
-});
 
   // // Get all examples
   // app.get("/api/examples", function (req, res) {
