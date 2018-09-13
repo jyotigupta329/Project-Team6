@@ -2,4 +2,7 @@ DROP DATABASE IF EXISTS inspire_db;
 CREATE DATABASE inspire_db;
 
 DROP DATABASE IF EXISTS test_db;
-CREATE DATABASE test_db;
+CREATE DATABASE text_db;
+
+
+

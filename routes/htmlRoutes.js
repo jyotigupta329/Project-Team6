@@ -1,11 +1,12 @@
 var db = require("../models");
+var check = require("../authcheck.js");
 
 //Auth Dependencies. We may move passport to its own file, but getting it working for now:
 const passport = require("passport");
     const { Strategy: JwtStrategy, ExtractJwt } = require("passport-jwt")
 
     const passportOps = {
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      jwtFromRequest: ExtractJwt.fromBodyField(),
       secretOrKey: process.env.JWT_SECRET
   }
 
@@ -29,19 +30,19 @@ module.exports = function(app) {
 
   
 
-  app.get("/verified", passport.authenticate('jwt', {session: false}), function(req, res) {
-    req.setRequestHeader('Authorization', 'Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZXhwaXJlcyI6MTUzOTM3MTEwODIwMCwiaWF0IjoxNTM2Nzc5MTA4fQ.fQ63RLS7Jd8QeZ0LlOAIKa_PL9YzEgQiWRAzq38Kc9c' );
-    // console.log(req.userName);
-    // const { userName, password } = req.userName;
-    res.render("verified");
-  });
+  // app.post("/verified", passport.authenticate('jwt', {session: false}), function(req, res) {
+  //   // req.setRequestHeader('Authorization', 'Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZXhwaXJlcyI6MTUzOTM3MTEwODIwMCwiaWF0IjoxNTM2Nzc5MTA4fQ.fQ63RLS7Jd8QeZ0LlOAIKa_PL9YzEgQiWRAzq38Kc9c' );
+  //   console.log(req.body.jwtToken);
+  //   // const { userName, password } = req.userName;
+  //   res.render("verified");
+  // });
+
+  // app.post("/verified", function (req, res){
+  //     ;
+  // });
 
   app.get("/", function(req, res) {
     res.render("index");
-  });
-  
-   app.get("/results", function(req, res) {
-    res.render("results");
   });
 
   app.get("/results", function(req, res) {

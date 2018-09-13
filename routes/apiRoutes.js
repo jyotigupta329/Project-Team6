@@ -32,6 +32,15 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/verifiedit"), function (req,res) {
+    console.log("VERIFIED IT REQ.BODY: ", req.body)
+     res.json(req);
+  };
+
+  app.get("/verifiedit"), function (req,res) {
+    res.json(req);
+ };
+
   // The POST that pushes a new user into the db.
   app.post("/api/register", function (req, res) {
     console.log("REGISTER API CALLED PRE-ENCRYPTION.");

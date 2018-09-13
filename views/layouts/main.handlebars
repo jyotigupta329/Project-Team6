@@ -47,18 +47,36 @@
             // See what values have been put into the fields.
         });
 
-        $("#login-btn").on("click", function (event) {
+        $("#login-btn").on("mousedown", function (event) {
             event.preventDefault();
             $.post("/api/login", {
                 userName: $("#username-login").val(),
                 password: $("#password-login").val()
             }, function (response) {
-                console.log("**JWT?***: ", response);
+                console.log("**JWT RECEIVED***: ", response);
                 localStorage.setItem("token", response.token);
             });
         });
+
+        $("#login-btn").on("mouseup", function (event) {
+            event.preventDefault();
+            $.post("/api/verifiedit", {
+                jwtToken: localStorage.token
+            }, function (response) {
+                console.log("Response after token SENT to verified: ", response);
+            });
+        });
+
+
+
+
+
 
     </script>
 </body>
 
 </html>
+
+
+{{!-- $("#login-btn").on("click", function (event) { event.preventDefault(); $.post( "/verifiedit", { jwtToken: localStorage.token
+}, function (response) { console.log("**JWT passed along***: ", response); }); }); --}}
