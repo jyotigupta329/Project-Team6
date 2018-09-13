@@ -1,4 +1,5 @@
 <nav>
+<<<<<<< HEAD
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo center"></a>
             <ul class="left">
@@ -28,3 +29,47 @@
             <div class="clear"></div>
         </div>
     </div>
+=======
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Inspire</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+                <!-- Profile hyperlink to profile.html page -->
+                <a href="#">Profile (username)</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col m6">
+            <div>
+                <p class="label">Quote:</p>
+                <!--{{this.quote}}-->
+                <ul>
+                    {{#each quote}}
+                        <span>"</span>
+                        <li>{{this}}</li>
+                        <span>"</span>
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+        <div class="input-field col m6">
+            <div>
+                <p class="label">Song:</p>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m5"></div>
+        <div class="col m2">
+            <a class="waves-effect waves-light btn-small" id="return">Return Home</a>
+        </div>
+        <div class="col m5"></div>
+    </div>
+</div>
+>>>>>>> 8faf1731b428f56343fece87429423759c416234

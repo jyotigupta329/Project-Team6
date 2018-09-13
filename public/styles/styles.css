@@ -12,6 +12,7 @@ body {
 .list-group-item {
   line-height: 2.5;
 }
+
  #submit {
    margin: 0 auto;
    margin-top: 60px;
@@ -157,6 +158,24 @@ body {
 #username[type=text]:hover {
   border-bottom: 1px solid #CAE4DB;;
   box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+.sidenav-trigger {
+  margin-left: 20px;
+  size: 40px;
+  color: #CAE4DB;
+}
+
+#welcome {
+  margin-left: 20px;
+}
+
+.sidenav {
+  background-color: white;
+}
+
+.subheader {
+  font-size: 24px;
 }
 
 
@@ -334,6 +353,7 @@ body {
   -webkit-animation-duration: 20s;
 }
 /* end of main page background */
+<<<<<<< HEAD
 
 [class*="col-"] {
     float: left;
@@ -373,4 +393,21 @@ body {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+=======
+body, html{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+}
+.container-404{
+  background-image: url("./broken-404.gif");
+  /* background: red; */
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  color: #EE9403;
+  background-repeat: none;
+>>>>>>> 8faf1731b428f56343fece87429423759c416234
 }
