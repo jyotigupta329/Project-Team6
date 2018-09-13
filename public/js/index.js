@@ -19,9 +19,6 @@ $(function () {
       feeling: temp
     };
     window.location.href = "http://localhost:3000/api/result/" + temp;
-
-
-
     // $.ajax("/api/findSong/" + temp, {
     //   type: "GET"
     // }).then(function (spotifyRes) {
