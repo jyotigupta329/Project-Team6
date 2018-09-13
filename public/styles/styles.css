@@ -44,7 +44,7 @@ body {
    margin-bottom: 20px;
    font-size: 72px;
    color: #CAE4DB;
-   /* font-family: 'Shrikhand', cursive; */
+  font-family: 'Shrikhand', cursive;
  }
 
  #resultsHeader {
