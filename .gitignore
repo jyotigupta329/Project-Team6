@@ -4,5 +4,6 @@ node_modules/
 .DS_Store/
 .env
 /config/config.json
+
 individual_dev/
 
