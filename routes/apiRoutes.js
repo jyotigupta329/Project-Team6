@@ -22,7 +22,7 @@ module.exports = function (app) {
 
 
     var optionspost = {
-      url: 'https://api.paperquotes.com/apiv1/quotes/?tags=' + keyWord,
+      url: 'https://api.paperquotes.com/apiv1/quotes/?tags=' + keyWord + '&limit=10',
       headers: {
         'Authorization': 'TOKEN e2eeb1aa9f32eb07fa04595a0c457ecb6fadb772'
       },
@@ -40,7 +40,7 @@ module.exports = function (app) {
           console.info(body);
           var quotesObject = [];
           for (var i = 0; i < body.results.length; i++) {
-            quotesObject.push(body.results[0].quote);
+            quotesObject.push(body.results[i].quote);
           }
           hsbResultObject.quote = quotesObject;
           res.render("results", hsbResultObject);
