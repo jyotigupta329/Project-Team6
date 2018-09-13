@@ -333,3 +333,19 @@ body {
   -webkit-animation-duration: 20s;
 }
 /* end of main page background */
+body, html{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+}
+.container-404{
+  background-image: url("./broken-404.gif");
+  /* background: red; */
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  color: #EE9403;
+  background-repeat: none;
+}
