@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inspire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- Javascript -->
+    <script src="../js/index.js" type="text/javascript"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Shrikhand" rel="stylesheet">
+    <!-- Google Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center"></a>
+            <ul class="left">
+                <li><a id="login" href="#">Login</a></li>
+                <li><a id="register" href="#">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="login-form" class="webui-popover-content">
+        <form action="" method="post">
+            <div class="input-field">
+                <input type="text" id="username" placeholder="username">
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" placeholder="password">
+            </div>
+            <button class="btn waves-effect waves-light blue darken-4 modal-trigger" href="#modal2" id="submitbutton" type="submit" name="action">Login
+                <i class="material-icons right">send</i>
+            </button>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4>You're logged in!</h4>
+                  <p>Welcome! In the future, we hope to be able to save your quotes and song choices, record past moods, and give you the ability to share your favorites from our site. For now, enjoy. </p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Thanks!</a>
+                </div>
+              </div>
+        </form>
+    </div>
+    <div id="register-form" class="webui-popover-content">
+            <form action="" method="post">
+                <div class="input-field">
+                    <input type="text" id="username" placeholder="username">
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="password">
+                </div>
+                <button class="btn waves-effect waves-light blue darken-4 modal-trigger" href="#modal1" id="registerbutton" type="submit" name="action">Register
+                    <i class="material-icons right">person_add</i>
+                </button>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Thank you for registering!</h4>
+                      <p>Please enter the username and password used to register in the login tab, and start getting inspired now!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's go!</a>
+                    </div>
+                  </div>
+            </form>
+        </div>
+    <div class="container">
+        <div class="row center">
+            <div class="col m4"></div>
+            <div class="col m4">
+                <header id="header">Inspire</header>
+            </div>
+            <div class="col m4"></div>
+        </div>
+        <div class="row center">
+            <div class="col m2"></div>
+            <div class="input-field col m8" title="Enter your mood, and we'll help you out.">
+                <input placeholder="How are you feeling?" id="feeling" type="text" class="validate">
+                <label id="feeling-label" for="feeling_type"></label>
+            </div>
+            <div class="col m2"></div>
+        </div>
+        <div class="row center">
+            <div class="col m4"></div>
+            <div class="col m4">
+                <a class="waves-effect waves-light btn-large center blue darken-4" id="submit">Set My Mood</a>
+            </div>
+            <div class="col m4"></div>
+        </div>
+    </div>
+    <div id="home" class="panel">
+        <div class="inner">
+            <div id="backgroundchange">
+                <div class="backgroundimg" id="back1"></div>
+                <div class="backgroundimg" id="back2"></div>
+                <div class="backgroundimg" id="back3"></div>
+                <div class="backgroundimg" id="back4"></div>
+                <div class="backgroundimg" id="back5"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+
+    <script>
+
+
+        $("#login-btn").click(function () {
+            var username = $("#username-input").val();
+            var password = $("#password-input").val();
+        });
+
+    </script>
+</body>
+</html>
+

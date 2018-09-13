@@ -1,0 +1,13 @@
+node_modules/
+.vscode
+.idea/
+.DS_Store/
+.env
+<<<<<<< HEAD
+/config/config.json
+
+
+=======
+config/config.json
+individual_dev/
+>>>>>>> 489ba897670190eedd41eaaca3e3aabe13bf98d0

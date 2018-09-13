@@ -1,0 +1,52 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Inspire</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+                <!-- Profile hyperlink to profile.html page -->
+                <a href="#">Profile (username)</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col m12">
+            <div>
+                <h4 class="label" style="margin-top:100px ;  text-align: center ">
+                    <strong>Quote</strong>
+                </h4>
+                <!--{{this.quote}}-->
+                <ul style="font-family: cursive; font-size: 25px">
+                    {{#each quote}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                {{!--
+                <h5 class="label">
+                    <strong>Song</strong>
+                </h5> --}}
+                <a href="{{this.song}}" target="_blank">
+                    <h5 style="text-align: center">play Me!!</h5>
+                </a>
+            </div>
+        </div>
+        {{!--
+        <div class="input-field col m3"> --}} {{!--
+            <div>
+                <h5 class="label" style="margin-top:200px; margin-right: 5px">
+                    <strong>Song</strong>
+                </h5>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
+            </div> --}} {{!-- </div> --}}
+    </div>
+    <div class="row">
+        <div class="col m5"></div>
+        <div class="col m2">
+            <a class="waves-effect waves-light btn-small" style="background-color: #ee6e73" id="return" href="/">Return Home</a>
+        </div>
+        <div class="col m5"></div>
+    </div>

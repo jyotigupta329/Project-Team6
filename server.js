@@ -2,7 +2,6 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
 var db = require("./models");
 
 var app = express();
@@ -26,6 +25,7 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+//changed from false to true only in the following line and not below it
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
@@ -46,3 +46,4 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+
