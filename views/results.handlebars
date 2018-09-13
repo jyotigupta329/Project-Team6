@@ -13,17 +13,24 @@
 <div class="container">
     <div class="row">
         <div class="input-field col m6">
-            <p>
-                <span class="label">Quote:</span>
-                {{this.quote}}
+            <div>
+                <p class="label">Quote:</p>
+                <!--{{this.quote}}-->
+                <ul>
+                    {{#each quote}}
+                        <span>"</span>
+                        <li>{{this}}</li>
+                        <span>"</span>
+                    {{/each}}
+                </ul>
 
-            </p>
+            </div>
         </div>
         <div class="input-field col m6">
-            <p>
-                <span class="label">Song:</span>
+            <div>
+                <p class="label">Song:</p>
                 <a href="{{this.song}}" target="_blank">play Me!!</a>
-            </p>
+            </div>
         </div>
     </div>
     <div class="row">
