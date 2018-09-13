@@ -3,5 +3,5 @@ node_modules/
 .idea/
 .DS_Store/
 .env
-/config/config.json
+config/config.json
 individual_dev/
