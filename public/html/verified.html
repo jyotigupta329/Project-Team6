@@ -32,47 +32,26 @@
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo center"></a>
             <ul class="left">
-                <li><a id="login" href="#">Login</a></li>
-                <li><a id="register" href="#">Register</a></li>
+                <li><span id="welcome" href="#">Welcome: </span></li>
+                <li><a id="logout" href="#">Logout</a></li>
             </ul>
         </div>
     </nav>
     
-    <div id="login-form" class="webui-popover-content">
-        <form action="" method="post">
-            <div class="input-field">
-                <input type="text" id="username" placeholder="username">
-            </div>
-            <div class="input-field">
-                <input type="password" id="password" placeholder="password">
-            </div>
-            <button class="btn waves-effect waves-light blue darken-4" id="submitbutton" type="submit" name="action" onclick="ShowProfile()">Login
-                <i class="material-icons right">send</i>
-            </button>
-        </form>
-    </div>
-    <div id="register-form" class="webui-popover-content">
-            <form action="" method="post">
-                <div class="input-field">
-                    <input type="text" id="username" placeholder="username">
-                </div>
-                <div class="input-field">
-                    <input type="password" id="password" placeholder="password">
-                </div>
-                <button class="btn waves-effect waves-light blue darken-4 modal-trigger" href="#modal1" id="registerbutton" type="submit" name="action">Register
-                    <i class="material-icons right">person_add</i>
-                </button>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                      <h4>Thank you for registering!</h4>
-                      <p>Please enter the username and password used to register in the login tab, and start getting inspired now!</p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's go!</a>
-                    </div>
-                  </div>
-            </form>
-        </div>
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="https://awakenthegreatnesswithin.com/wp-content/uploads/2017/08/Chinese-Proverbs-1.jpg">
+          </div>
+          <a href="#name"><span class="white-text name"></span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">person</i>Profile</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Mood History</a></li>
+        <li><span id="moodHistory" class="black-text"></span></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
     <div class="container">
         <div class="row center">
             <div class="col m4"></div>
