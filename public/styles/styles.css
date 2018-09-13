@@ -201,7 +201,7 @@ body {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url("https://everyday-c80f.kxcdn.com/wp-content/uploads/2017/03/76-Inspirational-picture-quotes-and-motivational-images.jpg") no-repeat center fixed;
+  ), url("./backgroundimage1.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -218,7 +218,7 @@ body {
   background:linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url("https://awakenthegreatnesswithin.com/wp-content/uploads/2017/01/OM-1.jpg") no-repeat center fixed;
+  ), url("./backgroundimage2.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -235,7 +235,7 @@ body {
   background:linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url("https://media1.popsugar-assets.com/files/thumbor/_XIv2PMlWMie6FmqWMBh7pr-XHk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/19/992/n/36735815/c5a39fb959c04d658f6b73.48321050_edit_img_cover_file_37438685_1477814400/i/39-Inspirational-Quotes-Change-Your-Life.jpg") no-repeat center fixed;
+  ), url("./backgroundimage3.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -252,7 +252,7 @@ body {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ),url("https://awakenthegreatnesswithin.com/wp-content/uploads/2017/05/WQ-1.jpg") no-repeat center fixed;
+  ),url("./backgroundimage4.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -269,7 +269,7 @@ body {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ),url("http://2wixx71erohn2ixvfu42jxuw.wpengine.netdna-cdn.com/wp-content/uploads/2015/09/shutterstock_280199000-1000x641.jpg") no-repeat center fixed;
+  ),url("./backgroundimage5.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
