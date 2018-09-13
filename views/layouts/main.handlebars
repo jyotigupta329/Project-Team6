@@ -16,7 +16,7 @@
     <!-- Javascript -->
     <script src="../js/index.js" type="text/javascript"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Shrikhand|Gamja+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Shrikhand" rel="stylesheet">
     <!-- Google Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize -->
@@ -35,48 +35,26 @@
     <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
 
     <script>
-        //We might migrate these files, but at they exist now (and here) for some compatibility purposes:
 
-        $("#register-btn").on("click", function () {
 
-            //On the press of the login button
+        $("#register-btn").on("click", function (event) {
+            event.preventDefault();
             var username = $("#username-register").val();
             var password = $("#password-register").val();
-            console.log("At this time, username: ", username);
-            console.log("At this time, password: ", password);
-            // See what values have been put into the fields.
         });
 
-        $("#login-btn").on("mousedown", function (event) {
+        $("#login-btn").on("click", function (event) {
             event.preventDefault();
             $.post("/api/login", {
                 userName: $("#username-login").val(),
                 password: $("#password-login").val()
             }, function (response) {
-                console.log("**JWT RECEIVED***: ", response);
                 localStorage.setItem("token", response.token);
             });
         });
-
-        $("#login-btn").on("mouseup", function (event) {
-            event.preventDefault();
-            $.post("/api/verifiedit", {
-                jwtToken: localStorage.token
-            }, function (response) {
-                console.log("Response after token SENT to verified: ", response);
-            });
-        });
-
-
-
-
 
 
     </script>
 </body>
 
 </html>
-
-
-{{!-- $("#login-btn").on("click", function (event) { event.preventDefault(); $.post( "/verifiedit", { jwtToken: localStorage.token
-}, function (response) { console.log("**JWT passed along***: ", response); }); }); --}}

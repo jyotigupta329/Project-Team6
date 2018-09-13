@@ -7,12 +7,18 @@ $(function () {
   $("#submit").on("click", function (event) {
     event.preventDefault();
     console.log("inspired")
-    var temp = $("#feeling").val().trim();
+    var temp = $("#feeling").val().toLowerCase().trim();
+    if (temp == "") {
+      temp = "random";
+    }
     console.log("User feeling is:" + temp);
     var userFeeling = {
       feeling: temp
     };
     window.location.href = "http://localhost:3000/api/result/" + temp;
+
+
+
     // $.ajax("/api/findSong/" + temp, {
     //   type: "GET"
     // }).then(function (spotifyRes) {
@@ -66,7 +72,7 @@ $(function () {
     //   }); //close get ajax call
     //   // )};
     // });//close submit on-click
-  });   //close function()
+  });
 });
 
 
