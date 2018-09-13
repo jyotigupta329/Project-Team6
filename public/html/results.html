@@ -30,7 +30,7 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo center"></a>
-            <ul class="left">
+            <ul class="left" id="resultprofile">
                 <li><a id="profile" href="#">Profile</a></li>
         </div>
     </nav>
@@ -43,16 +43,21 @@
             <div class="col m4"></div>
         </div>
         
-        <div class="container">
+        <div id="container">
             <div class="first">
-                <p>
-                    <span class="label">Quote:</span> {{this.quote}}
-                </p>
+                <p class="label">Song:</p>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
             </div>
             <div class="second">
-                <p>
-                    <span class="label">Song:</span> {{this.song}}
-                </p>
+                <p class="label">Quote:</p>
+                <!--{{this.quote}}-->
+                <ul>
+                    {{#each quote}}
+                        <span>"</span>
+                        <li>{{this}}</li>
+                        <span>"</span>
+                    {{/each}}
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
