@@ -71,24 +71,31 @@ body {
   color: white;;
 }
 
-#container {
+/* #container {
   display: inline-block;
   width: 100%;
   margin: auto;
   margin-left: 5%;
-}
+} */
  .first {
   display: inline-block;
-  width: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  width: 80%;
   height: 100px;
   word-wrap: break-word;
   padding: 8px;
  }
  .second {
-  width: 500px;
-  height: 300px;
-  padding: 8px;
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  width: 80%;
+  height: 100px;
   word-wrap: break-word;
+  padding: 8px;
  }
  .clear{
    clear: both;

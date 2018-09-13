@@ -43,16 +43,21 @@
             <div class="col m4"></div>
         </div>
         
-        <div class="container">
-            <div class="col-6 col-s-6 first">
-                <p>
-                    <span class="label">Quote:</span> {{this.quote}}
-                </p>
+        <div id="container">
+            <div class="first">
+                <p class="label">Song:</p>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
             </div>
-            <div class="col-6 col-s-6 second">
-                <p>
-                    <span class="label">Song:</span> {{this.song}}
-                </p>
+            <div class="second">
+                <p class="label">Quote:</p>
+                <!--{{this.quote}}-->
+                <ul>
+                    {{#each quote}}
+                        <span>"</span>
+                        <li>{{this}}</li>
+                        <span>"</span>
+                    {{/each}}
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
