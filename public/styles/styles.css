@@ -57,7 +57,7 @@ body {
   font-family: 'Shrikhand', cursive;
 }
  .resultsContainer {
-  background-color: #ffb7a0;
+  background-color: #7A9D96;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,6 +68,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: -100;
+  color: white;;
 }
 
 #container {
@@ -353,7 +354,6 @@ body {
   -webkit-animation-duration: 20s;
 }
 /* end of main page background */
-<<<<<<< HEAD
 
 [class*="col-"] {
     float: left;
@@ -393,7 +393,6 @@ body {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
-=======
 body, html{
   height: 100%;
 }
@@ -409,5 +408,4 @@ body, html{
   background-size: cover;
   color: #EE9403;
   background-repeat: none;
->>>>>>> 8faf1731b428f56343fece87429423759c416234
 }
