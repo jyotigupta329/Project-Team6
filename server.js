@@ -2,12 +2,6 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
-//Authentication requirements:  Not sure which files they'll go in, but including them so we have them:
-var bcrypt = require("bcrypt");
-var jwt = require("jsonwebtoken");
-//Authentication additions end.
-
 var db = require("./models");
 
 var app = express();
@@ -32,7 +26,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 //changed from false to true only in the following line and not below it
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
@@ -52,3 +46,4 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+
