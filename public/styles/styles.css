@@ -1,5 +1,12 @@
 body {
   border-color: transparent;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.label {
+  border-color: transparent;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
 }
 
 .list-group-item {
@@ -7,17 +14,83 @@ body {
 }
  #submit {
    margin: 0 auto;
-   margin-top: 20px;
+   margin-top: 60px;
+   font-family: 'Fjalla One', sans-serif;
+   display: inline-block;
+   overflow: hidden;
+   position: relative;
+   text-decoration: none;
+   text-transform: uppercase;
+   border-radius: 3px;
+   -webkit-transition: 0.3s;
+   -moz-transition: 0.3s;
+   -ms-transition: 0.3s;
+   -o-transition: 0.3s;
+   transition: 0.3s;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+   border: none; 
+   font-size: 15px;
+   text-align: center;
  }
+
+ #submit:hover {
+  box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+}
 
  #header {
    margin: 0 auto;
    margin-top: 175px;
    margin-bottom: 20px;
    font-size: 72px;
-   color: white;
+   color: #CAE4DB;
    font-family: 'Shrikhand', cursive;
  }
+
+ #resultsHeader {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+  font-family: 'Shrikhand', cursive;
+}
+ .resultsContainer {
+  background-color: #ffb7a0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  margin-left: 100px;
+}
+ .first {
+  display: inline-block;
+  width: 500px;
+  float: left;
+  height: 300px;
+  word-wrap: break-word;
+ }
+ .second {
+  width: 500px;
+  float: right;
+  height: 300px;
+  word-wrap: break-word;
+ }
+ .clear{
+   clear: both;
+ }
+
 
   nav {
   width: 100%;
@@ -27,6 +100,65 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
  }
+
+  #resultsNav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  }
+
+ #feeling {
+  font-weight: 300;
+  text-shadow: 0px 0px 3px #000;
+  color: white;
+  opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-field input[type=text] {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;
+}
+
+.input-field input[type=text]:hover {
+  border-bottom: 1px solid #7A9D9D; ;
+  box-shadow: 0 1px 0 0 #7A9D9D;;
+}
+
+#feeling[type=text]:enabled {
+  border-bottom: 1px solid #DCAE1D;;
+  box-shadow: 0 1px 0 0 #DCAE1D;;
+}
+
+#feeling[type=text]:hover {
+  border-bottom: 1px solid white;;
+  box-shadow: 0 1px 0 0 white;;
+}
+
+#password[type=password]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#password[type=password]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+#username[type=text]:enabled {
+  border-bottom: 1px solid #0d47a1;;
+  box-shadow: 0 1px 0 0 #0d47a1;;
+}
+
+#username[type=text]:hover {
+  border-bottom: 1px solid #CAE4DB;;
+  box-shadow: 0 1px 0 0 #CAE4DB;;
+}
+
+
 
  /* affects main page background*/
  .backgroundimg {

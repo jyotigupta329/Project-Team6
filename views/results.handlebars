@@ -1,4 +1,4 @@
-{{!-- <nav>
+<nav>
     <div class="nav-wrapper">
         <a href="#" class="brand-logo center">Inspire</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -14,12 +14,15 @@
     <div class="row">
         <div class="input-field col m6">
             <p>
-                <span class="label">Quote:</span> {{this.quote}}
+                <span class="label">Quote:</span>
+                {{this.quote}}
+
             </p>
         </div>
         <div class="input-field col m6">
             <p>
-                <span class="label">Song:</span> {{this.song}}
+                <span class="label">Song:</span>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
             </p>
         </div>
     </div>
@@ -30,38 +33,4 @@
         </div>
         <div class="col m5"></div>
     </div>
-</div> --}}
-
-
-var db = require("../models");
-
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    // db.Example.findAll({}).then(function(dbExamples) {
-    //   res.render("index", {
-    //     msg: "Welcome!",
-    //     examples: dbExamples
-    //   });
-    // });
-    res.render("index");
-  });
-  
-   app.get("/results", function(req, res) {
-    res.render("results");
-  });
-
-  // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-
-  // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
-};
+</div>
