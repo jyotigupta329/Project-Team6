@@ -5,6 +5,7 @@
     "database": "inspire_db",
     "host": "localhost",
     "dialect": "mysql",
+    "port" : 8889
   },
   "test": {
     "username": "root",

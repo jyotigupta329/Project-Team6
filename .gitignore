@@ -3,8 +3,7 @@ node_modules/
 .idea/
 .DS_Store/
 .env
-<<<<<<< HEAD
 /config/config.json
-=======
-/config/config.json
->>>>>>> cb9a484b9f1513ebd1f0e6bb007a186142e1d813
+
+individual_dev/
+
