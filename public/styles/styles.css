@@ -47,7 +47,7 @@ body {
   font-family: 'Shrikhand', cursive;
  }
 
- #resultsHeader {
+ /* #resultsHeader {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -55,8 +55,8 @@ body {
   font-size: 36px;
   color: white;
   font-family: 'Shrikhand', cursive;
-}
- .resultsContainer {
+} */
+ /* .resultsContainer {
   background-color: #7A9D96;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -69,7 +69,7 @@ body {
   width: 100%;
   z-index: -100;
   color: white;;
-}
+} */
 
 /* #container {
   display: inline-block;
@@ -77,7 +77,7 @@ body {
   margin: auto;
   margin-left: 5%;
 } */
- .first {
+ /* .first {
   display: inline-block;
   margin-left: 10%;
   margin-right: 10%;
@@ -99,7 +99,7 @@ body {
  }
  .clear{
    clear: both;
- }
+ } */
 
 
   nav {
