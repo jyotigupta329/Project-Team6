@@ -1,39 +1,52 @@
+<body style="background-color: #7A9D96; text-align:center;">
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper" style="background-color: #7A9D96; font-family: 'Shrikhand', cursive; text-align: center; font-size: 64px; -webkit-box-shadow: none;">
         <a href="#" class="brand-logo center">Inspire</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul id="nav-mobile" class="left hide-on-med-and-down" style="font-family: 'Fjalla One', sans-serif;">
             <li>
                 <!-- Profile hyperlink to profile.html page -->
-                <a href="#">Profile (username)</a>
+                <a href="#">Profile</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<div class="container">
+<div class="container" style="background-color: #7A9D96;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  color: white;">
     <div class="row">
-        <div class="input-field col m12">
-            <div>
-                <h4 class="label" style="margin-top:100px ;  text-align: center ">
-                    <strong>Quote</strong>
-                </h4>
+        
+            <h4 class="label" style="font-family: 'Shrikhand', cursive; margin-top:100px ;  text-align: center ">
+                <strong>Quote</strong>
                 <!--{{this.quote}}-->
-                <ul style="font-family: cursive; font-size: 25px">
-                    {{#each quote}}
-                    <li>{{this}}</li>
-                    {{/each}}
-                </ul>
+            </h4>
+            <div style="width: 100%; background-color: white; box-shadow: 0 1px 1px 0 #CAE4DB;">
+            <ul style="font-style: italic; font-size: 25px; margin-left: 10%; margin-right: 10%; color:#7A9D96;">
+                {{#each quote}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
             </div>
-            <div>
-                {{!--
-                <h5 class="label">
-                    <strong>Song</strong>
-                </h5> --}}
-                <a href="{{this.song}}" target="_blank">
-                    <h5 style="text-align: center">play Me!!</h5>
-                </a>
-            </div>
+        <div>
+            {{!--
+            <h5 class="label">
+                <strong>Song</strong>
+            </h5> --}}
+            <a href="{{this.song}}" target="_blank">
+                <h5 class="waves-effect waves-light btn-small" style="text-align: center; background-color: #0d47a1; color: white;">Your
+                    song</h5>
+            </a>
         </div>
+        
         {{!--
         <div class="input-field col m3"> --}} {{!--
             <div>
@@ -44,9 +57,6 @@
             </div> --}} {{!-- </div> --}}
     </div>
     <div class="row">
-        <div class="col m5"></div>
-        <div class="col m2">
-            <a class="waves-effect waves-light btn-small" style="background-color: #ee6e73" id="return" href="/">Return Home</a>
-        </div>
-        <div class="col m5"></div>
+            <a class="waves-effect waves-light btn-small" style="background-color: #0d47a1; margin-top: 60px;" id="return" href="/">Return Home</a>
     </div>
+</body>
