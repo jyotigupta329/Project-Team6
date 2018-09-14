@@ -1,57 +1,62 @@
-<body style="background:url(https://images.pexels.com/photos/921299/pexels-photo-921299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350); height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;">
-    <nav>
-        <div class="nav-wrapper" style="background-color: #ee6e73; text-align: center; font-size: 64px; -webkit-box-shadow: none;">
-            <a href="#" class="brand-logo center">Inspire</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down" style="font-family: 'Fjalla One', sans-serif;">
-                <li>
-                    <!-- Profile hyperlink to profile.html page -->
-                    <a href="#">Profile</a>
-                </li>
+{{!-- added body tag to keep set background --}}
+<body style="background-color: #7A9D96; text-align:center;">
+<nav>
+    <div class="nav-wrapper" style="background-color: #7A9D96; font-family: 'Shrikhand', cursive; text-align: center; font-size: 64px; -webkit-box-shadow: none;">
+        <a href="#" class="brand-logo center">Inspire</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down" style="font-family: 'Fjalla One', sans-serif;">
+            <li>
+                <!-- Profile hyperlink to profile.html page -->
+                <a href="#">Profile</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" style="background-color: #7A9D96;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  color: white;">
+    <div class="row">
+        
+            <h4 class="label" style="font-family: 'Shrikhand', cursive; margin-top:100px ;  text-align: center ">
+                <strong>Quote</strong>
+                <!--{{this.quote}}-->
+            </h4>
+            <div style="width: 100%; background-color: white; box-shadow: 0 1px 1px 0 #CAE4DB;">
+            <ul style="font-style: italic; font-size: 25px; margin-left: 10%; margin-right: 10%; color:#7A9D96;">
+                {{#each quote}}
+                <li>{{this}}</li>
+                {{/each}}
             </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="input-field col m12">
-                <div>
-                    <h3 class="label" style="margin-top:100px ;  text-align: center ">
-                        <strong>Quote!!</strong>
-                    </h3>
-                    <!--{{this.quote}}-->
-                    <ul style="font-family: cursive; font-size: 35px; font-weight: bolder">
-                        {{#each quote}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </div>
-                <div>
-                    {{!--
-                    <h5 class="label">
-                        <strong>Song</strong>
-                    </h5> --}}
-                    <a href="{{this.song}}" target="_blank">
-                        <h5 style="text-align: center; color: black; text-decoration: underline; text-decoration-style: double; hover">Play Me!!</h5>
-                    </a>
-                </div>
             </div>
+        <div>
             {{!--
-            <div class="input-field col m3"> --}} {{!--
-                <div>
-                    <h5 class="label" style="margin-top:200px; margin-right: 5px">
-                        <strong>Song</strong>
-                    </h5>
-                    <a href="{{this.song}}" target="_blank">play Me!!</a>
-                </div> --}} {{!-- </div> --}}
+            <h5 class="label">
+                <strong>Song</strong>
+            </h5> --}}
+            <a href="{{this.song}}" target="_blank">
+                <h5 class="waves-effect waves-light btn-small" style="text-align: center; background-color: #0d47a1; color: white;">Your
+                    song</h5>
+            </a>
         </div>
-        <div class="row">
-            <div class="col m5"></div>
-            <div class="col m2">
-                <a class="waves-effect waves-light btn-small" style="background-color: #ee6e73" id="return" href="/">Return Home</a>
-            </div>
-            <div class="col m5"></div>
-        </div>
+        
+        {{!--
+        <div class="input-field col m3"> --}} {{!--
+            <div>
+                <h5 class="label" style="margin-top:200px; margin-right: 5px">
+                    <strong>Song</strong>
+                </h5>
+                <a href="{{this.song}}" target="_blank">play Me!!</a>
+            </div> --}} {{!-- </div> --}}
+    </div>
+    <div class="row">
+            <a class="waves-effect waves-light btn-small" style="background-color: #0d47a1; margin-top: 60px;" id="return" href="/">Return Home</a>
+    </div>
 </body>
