@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $('#login').webuiPopover({ url: '#login-form' });
   $('#register').webuiPopover({ url: '#register-form' });
-  $('.modal').modal();
-  $('.sidenav').sidenav();
+  // $('.modal').modal();
+  // $('.sidenav').sidenav();
 });
 
 $(function () {
